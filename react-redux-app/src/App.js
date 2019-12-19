@@ -35,13 +35,14 @@ function App(props) {
   return (
     <div className="App">
       <Header>Fox Pictures!</Header>
-       {!props.foxes && !props.isFetching && <p> Get some pics of Foxes! </p> }
+       {!props.foxes  && <p> Get some pics of Foxes! </p> }
       {!props.isFetching && <Button onClick = {props.getFoxes}>More Foxes!</Button>}
       <br/>
       {props.isFetching && (
         <Loader type="Puff" color="#00BFFF" height={100} width={100} />
       )}
       {props.foxes && <Img src = {props.foxes.image} />}
+      {props.error && <p>{props.error}</p>}
     </div>
   );
 }

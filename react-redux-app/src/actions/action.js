@@ -13,6 +13,6 @@ export const getFoxes = () => dispatch => {
     })
     .catch(err => {
         console.log("err", err)
-        dispatch({ type: FETCH_FOX_FAILURE, payload: err.response})
+        dispatch({ type: FETCH_FOX_FAILURE, payload: err.message })
     })
 }

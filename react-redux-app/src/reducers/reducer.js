@@ -22,7 +22,7 @@ export const reducer = (state = initialState, action) => {
         case FETCH_FOX_FAILURE:
             return {
                 ...state,
-                err: action.payload,
+                error: action.payload,
                 isFetching: false
             }
         default:
